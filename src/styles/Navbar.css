@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+.dbz-title {
+    
+    font-family: 'Bangers', cursive; 
+    font-size: 3rem; 
+    color: #FF8C00; 
+    
+    -webkit-text-stroke: 1px #8B0000;
+    text-shadow: 
+        2px 2px 0 #FFD700,
+        4px 4px 0 #8B0000;
+    
+    transform: skew(-5deg); 
+    text-decoration: none; 
+}
+
+.navbar-light.bg-light {
+    background-color: #fce1a9 !important;
+    border-bottom: 3px solid #FF8C00;
+}
+
+
+/* boton fav!! */
+
+.dbz-button {
+    background-color: #FF9900 !important; 
+    border: 2px solid #CC6600 !important; 
+    color: #0A0A0A !important; 
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    
+    box-shadow: 
+        0 4px #CC6600,
+        0 0 10px rgba(255, 153, 0, 0.5); 
+    
+
+    transition: all 0.15s ease-out;
+}
+
+.dbz-button:hover {
+    background-color: #FFC04C !important;
+    border-color: #CC6600 !important;
+    box-shadow: 
+        0 4px #CC6600,
+        0 0 15px rgba(255, 192, 76, 0.8);
+    transform: translateY(-1px); 
+}
+
+.dbz-button:active {
+    box-shadow: 0 1px #CC6600;
+    transform: translateY(3px); 
+}
+
+.dropdown-menu {
+    border: 2px solid #CC6600;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item:hover {
+    background-color: #FFEDB3 !important;
+}
+
+/* barra de busqueda!*/
+
+.dbz-search.form-control {
+    background-color: #256db6; 
+    color: #f7f7f7; 
+    
+    border: 1px solid #FF9900; 
+    border-radius: 5px;
+
+    &::placeholder {
+        color: rgba(247, 247, 247, 0.6); 
+        font-style: italic;
+    }
+}
+
+.dbz-search.form-control:focus {
+    background-color: #1069c2;
+    border-color: #FF8C00; 
+    box-shadow: 0 0 0 0.25rem rgba(255, 140, 0, 0.4); 
+    color: white;
+}

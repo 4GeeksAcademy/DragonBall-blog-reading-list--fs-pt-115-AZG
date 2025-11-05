@@ -1,0 +1,27 @@
+.dbz-details-container {
+    background-color: #F8F9FA;
+    padding: 30px;
+    border-radius: 15px;
+    border: 5px solid #00BFFF; 
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.4); 
+}
+
+.dbz-detail-name {
+    font-family: 'Bangers', cursive;
+    color: #CC0000; 
+    -webkit-text-stroke: 1px #8B0000;
+    text-shadow: 2px 2px 0 #FF4500;
+}
+
+.dbz-detail-list dt {
+    color: #FF8C00;
+    font-weight: bold;
+    border-bottom: 1px dashed #E9ECEF; 
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.dbz-detail-list dd {
+    color: #212529; 
+    margin-bottom: 5px;
+}

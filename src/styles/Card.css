@@ -1,0 +1,55 @@
+
+.dbz-card {
+    background-color: #FFFBE6;
+    border: 3px solid #FFC107;
+    border-radius: 10px;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 0 15px rgba(255, 193, 7, 0.5);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.dbz-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 
+        0 8px 16px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(255, 165, 0, 0.7);
+}
+
+.dbz-card-title {
+    font-family: 'Bangers', cursive;
+    color: #CC6600; 
+    -webkit-text-stroke: 0.5px #A0522D; 
+    font-size: 1.5rem;
+}
+
+.dbz-card-text {
+    font-weight: 500;
+    color: #4A4A4A;
+}
+
+/* Boton ver mas! */
+.dbz-btn-learn-more {
+    background-color: #256db6 !important;
+    border: 2px solid #1069c2 !important; 
+    color: white !important;
+    font-weight: bold;
+    box-shadow: 0 4px #1069c2;
+    transition: all 0.15s ease-out;
+}
+
+.dbz-btn-learn-more:hover {
+    background-color: #1a5ca7 !important;
+    transform: translateY(-1px);
+}
+
+.dbz-card-scroll-wrapper {
+     margin-left: -15px; 
+    padding: 0 15px; 
+    width: 100vw; 
+    max-width: 100%;
+}
+
+.dbz-card-scroll-wrapper .d-flex {
+    padding-right: 20px !important; 
+}

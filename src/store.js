@@ -1,32 +1,67 @@
-export const initialStore=()=>{
-  return{
-    message: null,
-    todos: [
-      {
-        id: 1,
-        title: "Make the bed",
-        background: null,
-      },
-      {
-        id: 2,
-        title: "Do my homework",
-        background: null,
-      }
-    ]
-  }
-}
+export const initialStore = () => ({
+    characters: [],
+    planets: [],
+    favorites: JSON.parse(localStorage.getItem("db_favorites")) || [],
+    detail: null, 
+    loading: true,
+    searchTerm: "",
+});
 
-export default function storeReducer(store, action = {}) {
-  switch(action.type){
-    case 'add_task':
+const storeReducer = (state, action) => {
+    let newFavorites;
 
-      const { id,  color } = action.payload
+    switch (action.type) {
+        case "SET_DATA":
+            return {
+                ...state,
+                characters: action.payload.characters,
+                planets: action.payload.planets,
+                loading: false,
+            };
+        
+        case "SET_DETAIL":
+            return {
+                ...state,
+                detail: action.payload,
+                loading: false,
+            };
 
-      return {
-        ...store,
-        todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
-      };
-    default:
-      throw Error('Unknown action.');
-  }    
-}
+        case "SET_LOADING":
+            return {
+                ...state,
+                loading: true,
+            };
+            
+        case "SET_SEARCH_TERM":
+            return {
+                ...state,
+                searchTerm: action.payload,
+            };
+
+        case "ADD_FAVORITE":
+            if (state.favorites.some(fav => fav.id === action.payload.id && fav.type === action.payload.type)) {
+                return state;
+            }
+            newFavorites = [...state.favorites, action.payload];
+            localStorage.setItem("db_favorites", JSON.stringify(newFavorites));
+            return {
+                ...state,
+                favorites: newFavorites,
+            };
+
+        case "REMOVE_FAVORITE":
+            newFavorites = state.favorites.filter(
+                (fav) => !(fav.id === action.payload.id && fav.type === action.payload.type)
+            );
+            localStorage.setItem("db_favorites", JSON.stringify(newFavorites));
+            return {
+                ...state,
+                favorites: newFavorites,
+            };
+
+        default:
+            return state;
+    }
+};
+
+export default storeReducer;

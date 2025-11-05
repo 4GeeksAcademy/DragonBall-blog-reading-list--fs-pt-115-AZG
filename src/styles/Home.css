@@ -1,0 +1,18 @@
+
+.dbz-section-title {
+    font-family: 'Bangers', cursive; 
+    font-size: 2.5rem;
+    color: #CC0000; 
+    -webkit-text-stroke: 1px #FFD700; 
+    text-shadow: 
+        3px 3px 0 #8B0000; 
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.dbz-no-results-text {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 15px;
+    border: 2px solid #FF8C00;
+}

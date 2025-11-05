@@ -1,0 +1,20 @@
+
+.dbz-footer {
+    background-color: #fce1a9 !important;
+    color: #4A4A4A;
+    border-top: 3px solid #FF8C00; 
+    font-weight: 500;
+    
+    width: 100%;
+}
+
+.dbz-footer a {
+    color: #CC6600;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dbz-footer a:hover {
+    color: #8B0000;
+    text-decoration: underline;
+}

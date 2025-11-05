@@ -1,0 +1,18 @@
+
+
+.dbz-background {
+    background-image: url('https://images2.alphacoders.com/100/thumb-1920-1003880.png'); 
+
+    background-size: cover;
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+     
+}
+
+.dbz-content-overlay {
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 20px; 
+    border-radius: 10px;
+}
+
